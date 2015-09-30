@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AutoCopySmsCode</string>
+    <string name="app_name">短信验证码复制</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

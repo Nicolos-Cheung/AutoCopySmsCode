@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
 public class SmsReceiver extends BroadcastReceiver {
 
     private Context mContext;
+    private String code;
 
     public SmsReceiver(Context context) {
         mContext = context;
@@ -37,8 +38,8 @@ public class SmsReceiver extends BroadcastReceiver {
             builder.append(byt);
 
         }
-        String code = builder.toString();
-        System.out.println("__________________code"+code);
+        code = builder.toString();
+        builder = null;
         Pattern pattern = Pattern.compile("(\\d{4,6})");
         Matcher matcher = pattern.matcher(code);
 
@@ -51,5 +52,6 @@ public class SmsReceiver extends BroadcastReceiver {
             cmb.setText(code);
 
         }
+
     }
 }
